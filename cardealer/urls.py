@@ -16,6 +16,7 @@ urlpatterns = patterns('',
     
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', 'cardealer.views.home', name='home'),
+    url(r'^cars/$', 'cardealer.views.list_all_cars', name='list_all_cars'),
 )
 
 if settings.DEBUG:

@@ -1,0 +1,15 @@
+{% extends 'index.html' %}
+
+{% block title %}{{ title }} {% endblock %}
+
+{% block content %}
+{% if cars %}
+    <table class="table table-striped">
+        <tr>
+            <td>Car</td>
+            <td>Manufacturer</td>
+        </tr>
+    </table>
+{% endif %}
+
+{% endblock %}
