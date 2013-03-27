@@ -1,15 +1,20 @@
 {% extends 'index.html' %}
 
-{% block title %}{{ title }} {% endblock %}
+{% block title %}{{ title }}{% endblock %}
 
 {% block content %}
-{% if cars %}
-    <table class="table table-striped">
-        <tr>
-            <td>Car</td>
-            <td>Manufacturer</td>
-        </tr>
-    </table>
-{% endif %}
-
+    {% if cars %}
+        <table class="table table-striped">
+            <tr>
+                <td>Car</td>
+                <td>Manufacturer</td>
+            </tr>
+            {% for car in cars %}
+                <tr>
+                    <td>{{car.name}}</td>
+                    <td>{{car.manufacturer.name}}</td>
+                </tr>
+             {% endfor %}
+        </table>
+    {% endif %}
 {% endblock %}

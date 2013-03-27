@@ -6,19 +6,26 @@
 </head>
 
 <body>
-    <div class="sidebar">
-        {% block sidebar %}
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/admin/">Admin site</a></li>
-            <li><a href="/cars/">Cars available</a></li>
-        </ul>
-        {% endblock %}
+    <div class="navbar">
+        <div class="navbar-inner">
+            <a class="brand" href="#">DreamCar</a>
+            <ul class="nav">
+                <li><a href="/">Home</a></li>
+                <li><a href="/admin/">Admin site</a></li>
+                <li><a href="/cars/">Available cars</a></li>
+            </ul>
+        </div>
     </div>
     
     <div class="container">
-        {% block content %}
-        {% endblock %}
+        <div class="row">
+            <h1>Available cars</h1>
+            <div class="span12">
+                {% block content %}
+                    <h2>Second hand car dealership</h2>
+                {% endblock %}
+            </div>
+        </div>
     </div>
     
 </body>
