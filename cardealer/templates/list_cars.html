@@ -1,13 +1,13 @@
 {% extends 'index.html' %}
 
 {% block title %}{{ title }}{% endblock %}
-
 {% block content %}
     {% if cars %}
+        <h1>Available cars</h1>
         <table class="table table-striped">
             <tr>
-                <td>Car</td>
-                <td>Manufacturer</td>
+                <td><b>Car</b></td>
+                <td><b>Manufacturer</b></td>
             </tr>
             {% for car in cars %}
                 <tr>
